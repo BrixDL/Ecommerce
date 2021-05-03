@@ -45,14 +45,16 @@
                             @if($category -> created_at == NULL)
                             <span class="text-danger"> No Date Set </span>
                             @else
-                               {{ $category -> created_at -> diffForHumans()}}</td>
+                               {{ Carbon\Carbon::parse($category -> created_at) -> diffForHumans()}}
                             @endif
+                            </td>
                     </tr>
                       @endforeach
                     
                 </tbody>
             
                  </table>
+                 {{ $categories-> links() }}
                 </div>    
                     </div>
                 <div class="col-md-4">
