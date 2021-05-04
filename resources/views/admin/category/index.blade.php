@@ -51,10 +51,10 @@
                             </td>
                             <td>
                             <a href="{{ url('category/edit/'.$category->id) }}" class="btn btn-info">Edit</a>
-                            <a href="{{ url('softdelete/category'.$category->id) }}  " class="btn btn-danger">Delete</a>
+                            <a href="{{ url('softdelete/category/'.$category->id) }}" class="btn btn-danger">Delete</a>
                             
                             </td>
-    
+
 
 
 
@@ -130,8 +130,8 @@
                             @endif
                             </td>
                             <td>
-                            <a href="{{ url('category/edit/'.$category->id) }}" class="btn btn-info">Edit</a>
-                            <a href="{{ url('') }}  " class="btn btn-danger">Delete</a>
+                            <a href="{{ url('category/restore/'.$category->id) }}" class="btn btn-info">Restore</a>
+                            <a href="{{ url('pdelete/category/'.$category->id) }}" class="btn btn-danger">Delete Permanently</a>
                             
                             </td>
 
