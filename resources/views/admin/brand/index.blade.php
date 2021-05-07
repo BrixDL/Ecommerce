@@ -16,8 +16,9 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                        <div class="card-header"> All Brand</div>
                    @endif
+                   
+                   <div class="card-header"> All Brand</div>
                 <table class="table">
                 <thead>
                     <tr>
