@@ -12,7 +12,8 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 Route::get('/', function () {
-    return view('welcome');
+    $brands = DB::table('brands')->get();
+    return view('home',compact('brands'));
 });
 
 Route::get('/about', function () {
@@ -51,11 +52,13 @@ Route::post('/multi/add', [BrandController::class, 'StoreImg'])->name('store.ima
 
 
 
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     
     //$users= User::all();
     $users = DB::table('users')-> get();
-    return view('dashboard',compact('users'));
+    return view('admin.index');
 })->name('dashboard');
+
+Route::get('/user/logout', [BrandController::class, 'Logout'])->name('user.logout');
+
 
