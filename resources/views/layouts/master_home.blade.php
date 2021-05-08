@@ -36,7 +36,6 @@
 <body>
 	<!-- Start Header Area -->
 	@include('layouts.body.header')
-    @include('layouts.body.slider')
 	<!-- End Header Area -->
     @yield('home_content') 
 	<!-- start banner Area -->
